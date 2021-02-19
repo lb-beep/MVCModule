@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="MainContainerDiv" class="text-center">
+    <h1 id="MyPar" class="display-4">Welcome</h1>
+    <p >Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <section class="SexctionClass">
+
+        <span id="FunSpan">This is fun!</span>
+   
+    </section>
+    <div class="Sectionsssss">
+        <span>This is not that fun</span>
+
+    </div>
+</div>
+@section Scripts
+{
+  <script>
+      var h1Variable = $("MyPar");
+      $("#MyPar").css("color", "blue");
+
+
+
+      var span = $("<span></span>").text("Hello Man");
+      h1Variable.append(span);
+          
+
+      var sectionElements = $(".SectionClass");
+
+      for (var index = 0; index < sectionElements.length; index++) {
+          $(sectionElements[index]).css = ("color", 'purple');
+      }
+
+      @*var funSpan = $("#FunSpan");
+      $(".Sectionsssss").append(funSpan);*@
+
+      $("<button></button>").attr("id", "MyButton")
+          .text("Click Me").appendTo("#MainContainerDiv");
+   
+  </script>
+}
